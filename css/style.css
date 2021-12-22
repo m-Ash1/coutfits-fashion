@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Belleza&family=Josefin+Sans:wght@700&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;700&display=swap");
+
+:root {
+  --comment: "Open Sans", sans-serif;
+  --main-headings-btn: "Josefin Sans", sans-serif;
+  --bodycopy: "Montserrat", sans-serif;
+  --premium: "Belleza", sans-serif;
+
+  --main-color: #000807;
+  --second-color: #a3320b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--bodycopy);
+}
+
+/* Centralize all sections */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* XLarge */
+@media (min-width: 1440px) {
+  .container {
+    width: 1370px;
+  }
+}
+/* centralize end */
+
+/* Navigation Bar Style */
+nav {
+  background-color: var(--main-color);
+  padding: 25px 0px;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 10%;
+  margin-right: 5rem;
+}
+img {
+  width: 100%;
+}
+
+nav ul {
+  color: white;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+nav .left {
+  display: flex;
+}
+ul li {
+  margin-left: 20px;
+}
+.fa-chevron-down {
+  transform: scale(0.7);
+}
+
+.search {
+  background-color: #4b4b4ba9;
+  padding: 33.7px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.fa-search {
+  color: white;
+  transform: scale(2);
+  cursor: pointer;
+}
+
+.buttons {
+  align-items: center;
+  display: flex;
+  color: white;
+}
+.buttons .btn {
+  font-size: 14px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn.login {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+nav .btn.login:hover {
+  background-color: white;
+  color: black;
+}
+
+/* End Navigation Bar Style */
+
+/* Offer Style */
+.offer {
+  padding: 1.3em 0;
+  background-color: var(--second-color);
+  color: white;
+}
+
+.offer .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.offer .offer-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.offer .btn {
+  margin-top: 20px;
+  border: 1px solid white;
+  padding: 8px 15px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.offer .btn:hover {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+/* End Offer Style */
+
+/* First Section Style */
+.section1{
+  padding: 50px 0;
+}
+.section1 .container {
+  display: flex;
+  position: relative;
+}
+.main-heading, .heading {
+  font-family: var(--main-headings-btn);
+}
+.section1 .left-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+.section1 .left-part .main-heading {
+  font-size: 92px;
+}
+.section1 .left-part p {
+  font-weight: bold;
+  line-height: 22px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.section1 .btn {
+  margin: 0;
+  padding: 10px 50px;
+  font-size: 18px;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+.section1 .btn.register:hover {
+  margin-top: -10px;
+}
+.arrow {
+  position: absolute;
+  text-align: center;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: var(--comment);
+  font-size: 18px;
+  padding: 10px;
+  animation: click 0.8s ease-in-out 0s infinite alternate;
+  outline: none;
+}
+.arrow .fa-chevron-down {
+  transform: scale(1.5);
+}
+.section1 img {
+  width: 93%;
+}
+
+@keyframes click {
+  0% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.arrow a {
+  text-decoration: none;
+}
+.arrow a:visited {
+  color: initial;
+}
+
+/* End First Section Style */
+
+/* Second Section Style */
+.section2 {
+  padding: 100px 0px;
+}
+.heading {
+  font-size: 80px;
+  margin-left: 20px;
+  position: relative;
+  margin-bottom: 100px;
+}
+.heading span {
+  position: absolute;
+  top: -17px;
+  left: -102px;
+  font-size: 150%;
+  opacity: 0.06;
+}
+.section2 .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 40px;
+}
+.card.best-seller {
+  grid-row: span 3;
+  flex-direction: column;
+}
+.card.best-seller .image {
+  height: 400px;
+  width: 100%;
+}
+
+.card .image {
+  border-radius: 30px;
+  overflow: hidden;
+}
+.card {
+  display: flex;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.card-body {
+  padding: 20px;
+}
+.hashtags {
+  margin: 0px 0px 10px 0px;
+  font-weight: bolder;
+  font-family: var(--comment);
+}
+
+.card.best-seller .card-head {
+  font-size: 48px;
+}
+
+.card-desc {
+  opacity: 0.5;
+  margin-left: 20px;
+  position: relative;
+  line-height: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.card-desc::before {
+  content: "";
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  left: -15px;
+  top: 2px;
+  background-color: black;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+.profile .profile-image {
+  width: 11%;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+}
+.profile-info {
+  padding: 0 0 0 20px;
+}
+.profile-head {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.profile p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.card .image {
+  width: 240px;
+  display: flex;
+}
+.card .card-head {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.card .fa-comment-dots {
+  position: absolute;
+  transform: scale(2);
+  right: 25px;
+  bottom: 10px;
+  opacity: 0.8;
+}
+.card .image img {
+  transition: 0.3s;
+}
+.card .image:hover img {
+  transform: rotate(2deg) scale(1.2);
+  opacity: 0.8;
+}
+.card.best-seller .fa-comment-dots {
+  position: absolute;
+  bottom: 275px;
+  right: 25px;
+  transform: scale(2);
+}
+i .comments {
+  display: none;
+}
+.card i:hover .comments {
+  display: block;
+}
+/* End Second Section Style */
+
+/* Third Section Style */
+.section3 {
+  padding: 100px 0;
+}
+.section3 .container {
+  display: flex;
+  align-items: center;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+.cards-container .card {
+  display: flex;
+  flex-direction: column;
+  border: 15px solid black;
+}
+
+.section3 .card .card-body {
+  font-family: var(--premium);
+  font-size: 28px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-chevron-right {
+  transform: scale(3.5);
+  position: relative;
+  left: 50px;
+  cursor: pointer;
+}
+.fa-chevron-left {
+  transform: scale(3.5);
+  position: relative;
+  right: 50px;
+  cursor: pointer;
+}
+.fa-shopping-cart {
+  align-self: flex-end;
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.fa-shopping-cart:hover {
+  color: #a3320b;
+}
+/* End Third Section Style */
+
+/* Footer Style */
+footer {
+  padding: 80px;
+  background-color: #000807;
+  color: white;
+}
+footer .container {
+  display: grid;
+}
+.row-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
+}
+.col-1 {
+  grid-column: span 2;
+}
+.col-1 .logo {
+  width: 20%;
+  margin-bottom: 20px;
+}
+.col-1 p {
+  font-size: 10px;
+  margin-bottom: 40px;
+}
+.links .fab {
+  margin-right: 30px;
+  font-size: 25px;
+  transition: 0.3s;
+}
+.links .fab:hover {
+  color: #a3320b;
+  cursor: pointer;
+}
+.col-2,
+.col-3 {
+  display: grid;
+  font-size: 10px;
+  line-height: 18px;
+  grid-template-rows: repeat(8, 1fr);
+}
+.col-2 span:hover,
+.col-3 span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.col-2 span:first-child:hover,
+.col-3 span:first-child:hover {
+  cursor: default;
+  text-decoration: none;
+}
+.col-2 span:nth-child(1),
+.col-3 span:nth-child(1) {
+  grid-row: span 2;
+}
+
+.row-2 {
+  margin-top: 20px;
+}
+.row-3 {
+  margin-top: 30px;
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.row-3-col-1 span {
+  margin: 0 7px;
+}
+.col-btn {
+  padding: 4px 8px;
+  border: 1px solid white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.selection {
+  padding: 10px;
+  border: 1px solid white;
+  margin-left: 8px;
+  cursor: pointer;
+}
+.row-4 {
+  color: white;
+  margin-top: 40px;
+  font-size: 10px;
+  line-height: 15px;
+}
+.row-4 a{
+  color: white;
+}
+
+/* End Footer Style */
