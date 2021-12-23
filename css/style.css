@@ -24,15 +24,23 @@ body {
 }
 
 /* Centralize all sections */
-.container {
+.container,
+.container-heading {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
+.container-heading {
+  position: relative;
+  left: -280px;
+}
 
 @media (min-width: 768px) {
   .container {
+    width: 750px;
+  }
+  .container-heading {
     width: 750px;
   }
 }
@@ -41,10 +49,16 @@ body {
   .container {
     width: 970px;
   }
+  .container-heading {
+    width: 970px;
+  }
 }
 /* Large */
 @media (min-width: 1200px) {
   .container {
+    width: 1170px;
+  }
+  .container-heading {
     width: 1170px;
   }
 }
@@ -53,13 +67,21 @@ body {
   .container {
     width: 1370px;
   }
+  .container-heading {
+    width: 1370px;
+  }
 }
+
 /* centralize end */
 
 /* Navigation Bar Style */
 nav {
   background-color: var(--main-color);
   padding: 25px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  box-shadow: 0px 0px 15px rgb(0 0 0 / 10%);
 }
 nav .container {
   display: flex;
@@ -165,14 +187,15 @@ nav .btn.login:hover {
 /* End Offer Style */
 
 /* First Section Style */
-.section1{
+.section1 {
   padding: 50px 0;
 }
 .section1 .container {
   display: flex;
   position: relative;
 }
-.main-heading, .heading {
+.main-heading,
+.heading {
   font-family: var(--main-headings-btn);
 }
 .section1 .left-part {
@@ -231,6 +254,7 @@ nav .btn.login:hover {
 
 .arrow a {
   text-decoration: none;
+  color: black;
 }
 .arrow a:visited {
   color: initial;
@@ -278,7 +302,6 @@ nav .btn.login:hover {
   display: flex;
   position: relative;
   border-radius: 30px;
-  overflow: hidden;
 }
 .card-body {
   padding: 20px;
@@ -345,12 +368,94 @@ nav .btn.login:hover {
   font-weight: bold;
 }
 
-.card .fa-comment-dots {
+.card .icon {
+  opacity: 0.8;
+  transform: scale(1.8);
+  color: #000807;
+}
+.card .comments-section {
   position: absolute;
-  transform: scale(2);
   right: 25px;
   bottom: 10px;
-  opacity: 0.8;
+}
+.card.best-seller .comments-section {
+  position: absolute;
+  right: 10px;
+  bottom: 280px;
+  z-index: 1;
+}
+.card .comments-section .comment {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+  border-radius: 10px;
+  width: 800px;
+  height: 350px;
+  z-index: 5;
+  box-shadow: 0px 0px 15px rgb(0 0 0 / 10%);
+  display: grid;
+  opacity: 0;
+  grid-template-rows: 1fr 10px 1fr;
+  align-items: center;
+  padding: 20px;
+  transition: 0.6s;
+}
+
+.card .comments-section .special-comment {
+  width: 400px;
+  height: 170px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+}
+.reviewer-name {
+  margin-right: 10px;
+  font-weight: bold;
+  font-family: var(--bodycopy);
+}
+.stars {
+  display: flex;
+  margin-right: 3px;
+}
+.verified {
+  display: flex;
+  height: 15px;
+}
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.reviewer-review {
+  position: relative;
+  margin-top: 35px;
+  margin-left: 25px;
+  opacity: 0.7;
+}
+.reviewer-review::before {
+  position: absolute;
+  content: "“";
+  left: -25px;
+  top: -25px;
+  font-size: 32px;
+  font-weight: bold;
+}
+.reviewer-review::after {
+  position: absolute;
+  content: "”";
+  bottom: -30px;
+  right: 0px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.card .comments-section .icon:hover + .comment {
+  display: grid;
+  opacity: 1;
 }
 .card .image img {
   transition: 0.3s;
@@ -359,12 +464,7 @@ nav .btn.login:hover {
   transform: rotate(2deg) scale(1.2);
   opacity: 0.8;
 }
-.card.best-seller .fa-comment-dots {
-  position: absolute;
-  bottom: 275px;
-  right: 25px;
-  transform: scale(2);
-}
+
 i .comments {
   display: none;
 }
@@ -389,7 +489,7 @@ i .comments {
 .cards-container .card {
   display: flex;
   flex-direction: column;
-  border: 15px solid black;
+  border: 11px solid black;
 }
 
 .section3 .card .card-body {
@@ -399,7 +499,9 @@ i .comments {
   display: flex;
   justify-content: space-between;
 }
-
+.accesory-image {
+  z-index: -1;
+}
 .fa-chevron-right {
   transform: scale(3.5);
   position: relative;
@@ -510,8 +612,37 @@ footer .container {
   font-size: 10px;
   line-height: 15px;
 }
-.row-4 a{
+.row-4 a {
   color: white;
+}
+
+ul li:first-child {
+  position: relative;
+}
+ul li:first-child:hover .list {
+  display: grid;
+}
+.list {
+  display: none;
+  background-color: #000807;
+  padding: 20px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  height: 250px;
+  width: 180px;
+  list-style: none;
+  font-family: var(--bodycopy);
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 15px;
+}
+
+.list li {
+  margin: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.list li:hover {
+  padding-left: 20px;
 }
 
 /* End Footer Style */

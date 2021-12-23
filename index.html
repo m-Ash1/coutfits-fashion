@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="img/icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon.png" />
 
     <!-- Style Sheet -->
 
@@ -23,6 +23,7 @@
 
     <title>Coutfits - Boost Your Style</title>
   </head>
+
   <body>
     <!-- Navigation Bar -->
     <nav>
@@ -32,7 +33,16 @@
             <img src="img/logo.png" alt="logo" />
           </div>
           <ul>
-            <li>Menu <i class="fas fa-chevron-down"></i></li>
+            <li>Menu 
+              <i class="fas fa-chevron-down"></i>
+            <ul class="list">
+                <li>ALBUM</li>
+                <li>ACCESSORIES</li>
+                <li>SEND US</li>
+                <li>CART</li>
+                <li>BEST SELLER</li>
+            </ul>
+            </li>
             <li>Home</li>
           </ul>
         </div>
@@ -86,8 +96,10 @@
     <!-- End First Section -->
 
     <!-- Second Section -->
-    <section class="section2" id="section2" >
-      <div  class="heading">ALBUM <span>ALBUM</span></div>
+    <section class="section2">
+      <div class="container-heading">
+        <div id="section2" class="heading">ALBUM <span>ALBUM</span></div>
+      </div>
       <div class="container">
         <div class="card best-seller">
           <div class="image"><img src="img/2.png" alt="dress" /></div>
@@ -115,8 +127,46 @@
               </div>
             </div>
           </div>
-          <i class="far fa-comment-dots"> <div class="comments">hello</div></i>
+          <div class="comments-section">
+            <div class="icon">
+              <i class="far fa-comment-alt"></i>
+            </div>
+            <div class="comment">
+              <div class="review">
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Anna-Karin</div>
+                  <div class="stars">
+                    <img src="img/stars.png" />
+                  </div>
+                  <div class="verified">
+                    <img src="img/verified.png" />
+                  </div>
+                </div>
+                <div class="reviewer-review">
+                  I ordered this dress and it was beautiful, well made and
+                  really soft and comfortable. The postage ...
+                </div>
+              </div>
+              <hr />
+              <div class="review">
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Natasha</div>
+                  <div class="stars">
+                    <img src="img/stars.png" />
+                  </div>
+                  <div class="verified">
+                    <img src="img/verified.png" />
+                  </div>
+                </div>
+                <div class="reviewer-review">
+                  Bought online and delivered the next working day .. very
+                  pleased will order again 5 stars
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="card">
           <div class="image"><img src="img/3.png" alt="dress" /></div>
           <div class="card-body">
@@ -126,8 +176,30 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </div>
           </div>
-          <i class="far fa-comment-dots"> <div class="comments">hello</div></i>
+          <div class="comments-section">
+            <div class="icon">
+              <i class="far fa-comment-alt"></i>
+            </div>
+            <div class="comment special-comment">
+              <div class="review">
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Anna-Karin</div>
+                  <div class="stars">
+                    <img src="img/stars.png" />
+                  </div>
+                  <div class="verified">
+                    <img src="img/verified.png" />
+                  </div>
+                </div>
+                <div class="reviewer-review">
+                  Amazingly quick purchase order turn around for international!
+                  Will use these fellas again!
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="card">
           <div class="image"><img src="img/4.png" alt="dress" /></div>
           <div class="card-body">
@@ -137,7 +209,28 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </div>
           </div>
-          <i class="far fa-comment-dots"> <div class="comments">hello</div></i>
+          <div class="comments-section">
+            <div class="icon">
+              <i class="far fa-comment-alt"></i>
+            </div>
+            <div class="comment special-comment">
+              <div class="review">
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Anna-Karin</div>
+                  <div class="stars">
+                    <img src="img/stars.png" />
+                  </div>
+                  <div class="verified">
+                    <img src="img/verified.png" />
+                  </div>
+                </div>
+                <div class="reviewer-review">
+                  so easy to order, delivered fast, packaged environmentally
+                  sustainably and extremely good ...
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="card">
           <div class="image"><img src="img/5.png" alt="dress" /></div>
@@ -148,9 +241,28 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </div>
           </div>
-          <i class="far fa-comment-dots">
-            <div class="comments">hello</div>
-          </i>
+          <div class="comments-section">
+            <div class="icon">
+              <i class="far fa-comment-alt"></i>
+            </div>
+            <div class="comment special-comment">
+              <div class="review">
+                <div class="reviewer-info">
+                  <div class="reviewer-name">Anna-Karin</div>
+                  <div class="stars">
+                    <img src="img/stars.png" />
+                  </div>
+                  <div class="verified">
+                    <img src="img/verified.png" />
+                  </div>
+                </div>
+                <div class="reviewer-review">
+                  Well impressed. After initially being let down by Hermes as a
+                  courier, I flagged with t...
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -158,7 +270,9 @@
 
     <!-- Third Section -->
     <section class="section3">
-      <div class="heading">ACCESSORIES <span>ACCESSORIES</span></div>
+      <div class="container-heading">
+        <div class="heading">ACCESSORIES <span>ACCESSORIES</span></div>
+      </div>
       <div class="container">
         <i class="fas fa-chevron-left"></i>
         <div class="cards-container">
@@ -249,15 +363,27 @@
         <div class="row-3">
           <div class="row-3-col-1">
             <span>Sitemap</span> | <span>Accessibility</span> |
-            <span>Help Masthead</span> | <span>Condé Nast Spotlight
+            <span>Help Masthead</span> | <span>Condé Nast Spotlight </span>
             <span class="col-btn">COOKIES SETTINGS</span>
           </div>
           <div class="row-3-col-2">
-            CN Fashion & Beauty <span class="selection">United States <i class="fas fa-chevron-down"></i></span>
+            CN Fashion & Beauty
+            <span class="selection"
+              >United States <i class="fas fa-chevron-down"></i
+            ></span>
           </div>
         </div>
         <div class="row-4">
-          &copy; 2021 Ashes international. All rights reserved. Use of this site constitutes acceptance of our <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a> and <a href="#">Cookie Statement</a> and Your <a href="#">Egypt Privacy Rights</a>. Coutfits may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Ashes international. <a href="#">Ad Choices</a>
+          &copy; 2021 Ashes international. All rights reserved. Use of this site
+          constitutes acceptance of our <a href="#">User Agreement</a> and
+          <a href="#">Privacy Policy</a> and
+          <a href="#">Cookie Statement</a> and Your
+          <a href="#">Egypt Privacy Rights</a>. Coutfits may earn a portion of
+          sales from products that are purchased through our site as part of our
+          Affiliate Partnerships with retailers. The material on this site may
+          not be reproduced, distributed, transmitted, cached or otherwise used,
+          except with the prior written permission of Ashes international.
+          <a href="#">Ad Choices</a>
         </div>
       </div>
     </footer>
